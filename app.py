@@ -3,14 +3,14 @@ import pickle
 import numpy as np
 
 model = pickle.load(open("pickle_file.pkl", "rb"))
-insurance = Flask(__name__)
+app = Flask(__name__)
 
-@insurance.route('/')
+@app.route('/')
 def man():
     return render_template("home.html")
 
 
-@insurance.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def home():
     data = request.form['a']
     arr = np.array([[data]],dtype='float64')
@@ -18,4 +18,4 @@ def home():
     output = round(pred[0], 2)
     return render_template("home.html",answer = output)
 if __name__ == "__main__":
-    insurance.run(debug=True)
+    app.run(debug=True)

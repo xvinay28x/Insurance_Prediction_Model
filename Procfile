@@ -1,1 +1,1 @@
-web: gunicorn insurance:app
+web: gunicorn app:app
