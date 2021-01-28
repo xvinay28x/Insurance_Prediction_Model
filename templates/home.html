@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction of US Dollar Price In future </title>
+  <style>
+    body {
+  background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2019/02/05/1310619/37ab0be887b5a74c48c21b7928381ca0-1000.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="login">
+    <center>
+      <h1 style="color:rgb(119, 28, 138);"> Predict You Need Insurance Or Not </h1><br>
+      <form method = "POST" action = "{{url_for('home')}}">
+        <b><input type="text" name = 'a' placeholder = "Enter Your Age" required = "required"><br><br></b>
+        <button type="submit" >Predict</button>
+      </form>
+    </center>
+    <br>
+    <h1 style="color: aqua;">
+      <center>
+        {%if answer == 1%}
+        <h1>YOU NEED INSURANCE</h1>
+        {%elif answer == 0%}
+        <h1>YOU DONT NEED INSURANCE</h1>
+        {%endif%}
+    </center>
+    </h1>
+  </div>
+</body>
+</html>
