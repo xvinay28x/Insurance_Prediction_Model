@@ -9,7 +9,6 @@ app = Flask(__name__)
 def man():
     return render_template("home.html")
 
-
 @app.route('/predict', methods=['POST'])
 def home():
     data = request.form['a']
