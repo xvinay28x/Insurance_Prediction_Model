@@ -17,4 +17,4 @@ model.fit(x_train,y_train)
 x=model.predict([[19]])
 print(x)
 
-pickle.dump(model,open("Pickle_file.pkl","wb"))
+pickle.dump(model,open("model.pkl","wb"))
