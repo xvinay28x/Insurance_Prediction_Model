@@ -14,7 +14,7 @@ def home():
     data = request.form['a']
     arr = np.array([[data]],dtype='float64')
     pred = model.predict(arr)
-    output = round(pred[0], 2)
-    return render_template("home.html",answer = output)
+    #output = round(pred[0], 2)
+    return render_template("home.html",answer = pred)
 if __name__ == "__main__":
     app.run(debug=True)
